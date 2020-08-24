@@ -22,11 +22,11 @@ function setup() {
   
 createCanvas(windowWidth,windowHeight);
   
-  monkey = createSprite(width - 900,height - 435, 20, 20);
+  monkey = createSprite(width - 950,height - 435, 20, 20);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
-  ground = createSprite(width - 580,height - 400, 1400, 10);
+  ground = createSprite(width - 580,height - 400, 1800, 10);
   ground.velocityX = -3;
   ground.x = ground.width / 2;
 
