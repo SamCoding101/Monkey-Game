@@ -68,7 +68,7 @@ function foodSpawner() {
     food.addImage(bananaImage);
     food.scale = 0.1;
     food.velocityX = -4;
-    food.lifetime = (width/205)/4;
+    food.lifetime = (width - 575)/4;
     foodGroup.add(food);
   }
 }
@@ -79,7 +79,7 @@ function obstacleSpawner() {
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
-    obstacle.lifetime =(width + 205)/4;
+    obstacle.lifetime =(width - 575)/4;
      obstacleGroup.add(obstacle);
   }
 }
