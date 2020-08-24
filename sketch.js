@@ -10,7 +10,7 @@ var survival=0;
 
 
 function preload() {
-
+createCanvas(windowWidth,windowHeight);
 
   monkey_running = loadAnimation("sprite_0.png", "sprite_1.png", "sprite_2.png", "sprite_3.png", "sprite_4.png", "sprite_5.png", "sprite_6.png", "sprite_7.png", "sprite_8.png");
 
@@ -21,11 +21,11 @@ function preload() {
 
 function setup() {
 
-  monkey = createSprite(80, 315, 20, 20);
+  monkey = createSprite(width - 120,height + 115, 20, 20);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
-  ground = createSprite(400, 350, 900, 10);
+  ground = createSprite(width + 200,height + 150, 900, 10);
   ground.velocityX = -3;
   ground.x = ground.width / 2;
 
@@ -60,22 +60,22 @@ function draw() {
 
 function foodSpawner() {
   if (frameCount % 300 == 0) {
-    food = createSprite(405, Math.round(random(160, 270)), 20, 20);
+    food = createSprite(width + 205, Math.round(random(height - 40,height + 70)), 20, 20);
     food.addImage(bananaImage);
     food.scale = 0.1;
     food.velocityX = -4;
-    food.lifetime = 215;
+    food.lifetime = (width/205)/4;
     foodGroup.add(food);
   }
 }
 
 function obstacleSpawner() {
   if (frameCount % 300 == 0) {
-    obstacle = createSprite(405,320,20, 20);
+    obstacle = createSprite(width + 205,height + 120,20, 20);
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
-    obstacle.lifetime = 215;
+    obstacle.lifetime =(width + 205)/4;
      obstacleGroup.add(obstacle);
   }
 }
