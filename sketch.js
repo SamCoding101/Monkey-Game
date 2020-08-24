@@ -75,7 +75,7 @@ function foodSpawner() {
 
 function obstacleSpawner() {
   if (frameCount % 300 == 0) {
-    obstacle = createSprite(width + 205,height + 170,20, 20);
+    obstacle = createSprite(width + 205,height + 70,20, 20);
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
