@@ -26,7 +26,7 @@ createCanvas(windowWidth,windowHeight);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
-  ground = createSprite(width - 580,height - 400, 900, 10);
+  ground = createSprite(width - 580,height - 400, 1400, 10);
   ground.velocityX = -3;
   ground.x = ground.width / 2;
 
