@@ -32,6 +32,9 @@ createCanvas(windowWidth,windowHeight);
 
   foodGroup = createGroup();
   obstacleGroup = createGroup();
+  
+  console.log(windowWidth);
+  console.log(windowHeight);
 }
 
 function draw() {
