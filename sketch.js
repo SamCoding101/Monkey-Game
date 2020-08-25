@@ -62,22 +62,22 @@ function draw() {
 
 function foodSpawner() {
   if (frameCount % 300 == 0) {
-    food = createSprite(width - 575, Math.round(random(height - 820,height - 830)), 20, 20);
+    food = createSprite(width - 1036, Math.round(random(height - 820,height - 830)), 20, 20);
     food.addImage(bananaImage);
     food.scale = 0.1;
     food.velocityX = -4;
-    food.lifetime = (width - 575)/4;
+    food.lifetime = (width - 1036)/4;
     foodGroup.add(food);
   }
 }
 
 function obstacleSpawner() {
   if (frameCount % 300 == 0) {
-    obstacle = createSprite(width - 1575,height - 430,20, 20);
+    obstacle = createSprite(width - 1036,height - 430,20, 20);
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
-    obstacle.lifetime =(width - 1595)/4;
+    obstacle.lifetime =(width - 1036)/4;
      obstacleGroup.add(obstacle);
   }
 }
