@@ -28,7 +28,7 @@ createCanvas(windowWidth,windowHeight);
 
   ground = createSprite(width - 1580,height - 400, 2500, 10);
   ground.velocityX = -3;
-  ground.x = ground.width - 1000;
+  ground.x = ground.width - 1300;
 
   foodGroup = createGroup();
   obstacleGroup = createGroup();
