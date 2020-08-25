@@ -36,6 +36,7 @@ createCanvas(windowWidth,windowHeight);
 }
 
 function draw() {
+  background(255);
 
   if (game_state == "play") {
     foodSpawner();
@@ -49,7 +50,7 @@ function draw() {
 
   monkey.collide(ground);
 
-  if (keyDown("space"))&& monkey.y > 308) {
+  if (keyDown("space")&& monkey.y > 308) {
     monkey.velocityY = -14;
 
   }
