@@ -86,6 +86,6 @@ function survivalTime(){
  stroke("black");
   textSize(20);
   fill("black");
-  survival = survival + Math.round(getFrameRate()/60);
+  survival = survival + Math.round(getFrameRate()/60)
   text("Survival Time:"+survival,width - 880,height - 700);
 }
