@@ -22,13 +22,13 @@ function setup() {
 createCanvas(windowWidth,windowHeight);
   console.log(windowWidth);
   console.log(windowHeight);
-  monkey = createSprite(width - 1400,height - 435, 20, 20);
+  monkey = createSprite(width - 880,height - 435, 20, 20);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
   ground = createSprite(width - 1580,height - 400, 2500, 10);
   ground.velocityX = -3;
-  ground.x = ground.width - 1300;
+  ground.x = ground.width - 2300;
 
   foodGroup = createGroup();
   obstacleGroup = createGroup();
