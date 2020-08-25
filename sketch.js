@@ -44,8 +44,8 @@ function draw() {
     survivalTime();
   }
 
-  if (ground.x < 400) {
-    ground.x = ground.width / 1.5;
+  if (ground.x < 4000) {
+    ground.x = ground.width - 2000;
   }
 
   monkey.collide(ground);
@@ -77,7 +77,7 @@ function obstacleSpawner() {
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
-    obstacle.lifetime =(width - 1575)/4;
+    obstacle.lifetime =(width - 1595)/4;
      obstacleGroup.add(obstacle);
   }
 }
