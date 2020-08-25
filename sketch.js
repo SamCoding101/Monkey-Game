@@ -22,7 +22,7 @@ function setup() {
   
 createCanvas(windowWidth,windowHeight);
   
-  monkey = createSprite(width - 850,height - 435, 20, 20);
+  monkey = createSprite(0,height - 435, 20, 20);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
