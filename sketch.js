@@ -33,8 +33,6 @@ createCanvas(windowWidth,windowHeight);
   foodGroup = createGroup();
   obstacleGroup = createGroup();
   
-  console.log(windowWidth);
-  console.log(windowHeight);
 }
 
 function draw() {
@@ -53,9 +51,9 @@ function draw() {
 
   monkey.collide(ground);
 
-  if (keyDown("space") || touches.length>0)&& monkey.y > 308) {
+  if (keyDown("space"))&& monkey.y > 308) {
     monkey.velocityY = -14;
-    touches = [];
+
   }
   monkey.velocityY = monkey.velocityY + gravity;
 
