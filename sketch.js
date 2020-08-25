@@ -26,7 +26,7 @@ createCanvas(windowWidth,windowHeight);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
-  ground = createSprite(width - 580,height - 400, 2500, 10);
+  ground = createSprite(width - 1580,height - 400, 2500, 10);
   ground.velocityX = -3;
   ground.x = ground.width / 1.5;
 
@@ -50,9 +50,9 @@ function draw() {
 
   monkey.collide(ground);
 
-  if (keyDown("space")&& monkey.y > 308) {
+  if (keyDown("space") || touches.length>0)&& monkey.y > 308) {
     monkey.velocityY = -14;
-
+    touches = [];
   }
   monkey.velocityY = monkey.velocityY + gravity;
 
