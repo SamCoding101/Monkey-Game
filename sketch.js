@@ -36,8 +36,6 @@ createCanvas(windowWidth,windowHeight);
 }
 
 function draw() {
-  background(255);
-
 
   if (game_state == "play") {
     foodSpawner();
