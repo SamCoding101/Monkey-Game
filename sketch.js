@@ -44,7 +44,7 @@ function draw() {
     survivalTime();
   }
 
-  if (ground.x < 0) {
+  if (ground.x < 400) {
     ground.x = ground.width / 1.5;
   }
 
@@ -77,7 +77,7 @@ function obstacleSpawner() {
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
-    obstacle.lifetime =(width - 575)/4;
+    obstacle.lifetime =(width - 1575)/4;
      obstacleGroup.add(obstacle);
   }
 }
