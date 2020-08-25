@@ -22,13 +22,13 @@ function setup() {
   
 createCanvas(windowWidth,windowHeight);
   
-  monkey = createSprite(0,height - 435, 20, 20);
+  monkey = createSprite(50,height - 435, 20, 20);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
   ground = createSprite(width - 580,height - 400, 1800, 10);
   ground.velocityX = -3;
-  ground.x = ground.width / 2;
+  ground.x = ground.width / 1.5;
 
   foodGroup = createGroup();
   obstacleGroup = createGroup();
@@ -47,15 +47,15 @@ function draw() {
     survivalTime();
   }
 
-  if (ground.x < 0) {
-    ground.x = ground.width / 2;
+  if (ground.x < 100) {
+    ground.x = ground.width / 1.5;
   }
 
   monkey.collide(ground);
 
-  if (keyDown("space") && monkey.y > 308) {
+  if (keyDown("space") || touches.length>0)&& monkey.y > 308) {
     monkey.velocityY = -14;
-
+    touches = [];
   }
   monkey.velocityY = monkey.velocityY + gravity;
 
