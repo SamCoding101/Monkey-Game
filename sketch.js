@@ -22,11 +22,11 @@ function setup() {
   
 createCanvas(windowWidth,windowHeight);
   
-  monkey = createSprite(50,height - 435, 20, 20);
+  monkey = createSprite(width - 1400,height - 435, 20, 20);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
-  ground = createSprite(width - 580,height - 400, 1800, 10);
+  ground = createSprite(width - 580,height - 400, 2500, 10);
   ground.velocityX = -3;
   ground.x = ground.width / 1.5;
 
@@ -47,7 +47,7 @@ function draw() {
     survivalTime();
   }
 
-  if (ground.x < 100) {
+  if (ground.x < 0) {
     ground.x = ground.width / 1.5;
   }
 
@@ -76,7 +76,7 @@ function foodSpawner() {
 
 function obstacleSpawner() {
   if (frameCount % 300 == 0) {
-    obstacle = createSprite(width - 575,height - 430,20, 20);
+    obstacle = createSprite(width - 1575,height - 430,20, 20);
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
