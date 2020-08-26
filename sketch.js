@@ -62,7 +62,8 @@ function draw() {
 
 function foodSpawner() {
   if (frameCount % 300 == 0) {
-    food = createSprite(width - 536, Math.round(random(height - 820,height - 830)), 20, 20);
+    food = createSprite(width - 36,height - 400, 20, 20);
+    foood.y =  Math.round(random(height - 820,height - 830)) 
     food.addImage(bananaImage);
     food.scale = 0.1;
     food.velocityX = -4;
@@ -73,7 +74,7 @@ function foodSpawner() {
 
 function obstacleSpawner() {
   if (frameCount % 300 == 0) {
-    obstacle = createSprite(width - 536,height - 430,20, 20);
+    obstacle = createSprite(width - 36,height - 430,20, 20);
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
