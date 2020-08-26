@@ -63,11 +63,11 @@ function draw() {
 function foodSpawner() {
   if (frameCount % 300 == 0) {
     food = createSprite(width - 36,height - 400, 20, 20);
-    foood.y =  Math.round(random(height - 820,height - 830)) 
+    foood.y =  Math.round(random(height - 400,height - 350)) 
     food.addImage(bananaImage);
     food.scale = 0.1;
     food.velocityX = -4;
-    food.lifetime = (width - 536)/4;
+    food.lifetime = (width - 36)/4;
     foodGroup.add(food);
   }
 }
@@ -78,7 +78,7 @@ function obstacleSpawner() {
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
-    obstacle.lifetime =(width - 536)/4;
+    obstacle.lifetime =(width - 36)/4;
      obstacleGroup.add(obstacle);
   }
 }
