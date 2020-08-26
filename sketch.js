@@ -64,13 +64,13 @@ function foodSpawner() {
   if (frameCount % 300 == 0) {
     food = createSprite();
     food.y = Math.round(random(height + 590,height - 480)) 
-    food.x = width + (-36);
+    food.x = width - 36;
     food.width = 20;
     food.height = 20;
     food.addImage(bananaImage);
     food.scale = 0.1;
     food.velocityX = -4;
-    food.lifetime = (width + (-36))/4;
+    food.lifetime = (width - 36)/4;
     foodGroup.add(food);
   }
 }
