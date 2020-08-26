@@ -61,7 +61,7 @@ function draw() {
 }
 
 function foodSpawner() {
-  if (frameCount % 300 == 0) {
+  if (frameCount % 200 == 0) {
     food = createSprite();
     food.y = Math.round(random(height + 590,height - 480)) 
     food.x = width - 36;
@@ -76,7 +76,7 @@ function foodSpawner() {
 }
 
 function obstacleSpawner() {
-  if (frameCount % 300 == 0) {
+  if (frameCount % 200 == 0) {
     obstacle = createSprite(width - 36,height - 430,20, 20);
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
