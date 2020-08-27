@@ -2,7 +2,7 @@ var monkey, monkey_running;
 var banana, bananaImage;
 var food, foodImage, foodGroup;
 var score;
-var ground;
+var ground,groundImage;
 var obstacle, obstacleImage, obstacleGroup;
 var gravity = 0.9;
 var game_state = "play";
@@ -15,6 +15,7 @@ function preload() {
 
   bananaImage = loadImage("banana.png");
   obstacleImage = loadImage("obstacle.png");
+  ground = loadImage("ground2.png");
 
 }
 
@@ -28,6 +29,7 @@ createCanvas(windowWidth,windowHeight);
 
   ground = createSprite(width - 1580,height - 100, 2500, 10);
   ground.velocityX = -3;
+  ground.addImage(groundImage);
   ground.x = ground.width - 2300;
 
   foodGroup = createGroup();
