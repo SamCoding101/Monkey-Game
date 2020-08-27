@@ -30,7 +30,7 @@ createCanvas(windowWidth,windowHeight);
   ground = createSprite(width - 1580,height - 100, 2500, 10);
   ground.velocityX = -3;
   ground.addImage(groundImage);
-  ground.x = ground.width - 2300;
+  ground.x = ground.width/2
 
   foodGroup = createGroup();
   obstacleGroup = createGroup();
@@ -46,8 +46,8 @@ function draw() {
     survivalTime();
   }
 
-  if (ground.x < 4000) {
-    ground.x = ground.width - 2000;
+  if (ground.x < 0) {
+    ground.x = ground.width/2;
   }
 
   monkey.collide(ground);
