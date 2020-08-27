@@ -63,7 +63,7 @@ function draw() {
 function foodSpawner() {
   if (frameCount % 200 == 0) {
     food = createSprite();
-    food.y = Math.round(random(400,ground.y - 280)) 
+    food.y = Math.round(random(100,ground.y - 50)) 
     food.x = width - 36;
     food.width = 20;
     food.height = 20;
