@@ -22,11 +22,11 @@ function setup() {
 createCanvas(windowWidth,windowHeight);
   console.log(windowWidth);
   console.log(windowHeight);
-  monkey = createSprite(width - 1400,height - 435, 20, 20);
+  monkey = createSprite(width - 1400,height - 135, 20, 20);
   monkey.addAnimation("running", monkey_running);
   monkey.scale = 0.1;
 
-  ground = createSprite(width - 1580,height - 400, 2500, 10);
+  ground = createSprite(width - 1580,height - 100, 2500, 10);
   ground.velocityX = -3;
   ground.x = ground.width - 2300;
 
@@ -50,7 +50,7 @@ function draw() {
 
   monkey.collide(ground);
 
-  if ((keyDown("space") || touches.length>0)&& monkey.y > 308) {
+  if ((keyDown("space") || touches.length>0)&& monkey.y > 08) {
     monkey.velocityY = -14;
     touches = [];
   }
@@ -63,7 +63,7 @@ function draw() {
 function foodSpawner() {
   if (frameCount % 200 == 0) {
     food = createSprite();
-    food.y = Math.round(random(100,ground.y - 580)) 
+    food.y = Math.round(random(400,ground.y - 280)) 
     food.x = width - 36;
     food.width = 20;
     food.height = 20;
@@ -77,7 +77,7 @@ function foodSpawner() {
 
 function obstacleSpawner() {
   if (frameCount % 200 == 0) {
-    obstacle = createSprite(width - 36,height - 430,20, 20);
+    obstacle = createSprite(width - 36,height - 130,20, 20);
      obstacle.addImage(obstacleImage);
      obstacle.scale = 0.14;
      obstacle.velocityX = -4;
@@ -91,5 +91,5 @@ function survivalTime(){
   textSize(20);
   fill("black");
   survival = survival + Math.round(getFrameRate()/60);
-  text("Survival Time:"+survival,width - 880,height - 700);
+  text("Survival Time:"+survival,width - 880,height - 400);
 }
